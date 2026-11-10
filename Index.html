@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAYANK CRICKET LIVE</title>
+
+<style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
+body{
+ font-family:Arial,sans-serif;
+ background:#070d19;
+ color:white;
+}
+header{
+ background:#101c30;
+ padding:20px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ flex-wrap:wrap;
+ border-bottom:2px solid #00e5a0;
+}
+.logo{
+ font-size:25px;
+ font-weight:bold;
+ color:#00e5a0;
+}
+nav a{
+ color:white;
+ text-decoration:none;
+ margin:10px;
+ font-size:14px;
+}
+nav a:hover{color:#00e5a0}
+.hero{
+ text-align:center;
+ padding:40px 15px;
+ background:linear-gradient(130deg,#102e37,#101b36,#07101e);
+}
+.hero h1{
+ font-size:36px;
+ color:#00e5a0;
+ margin-bottom:12px;
+}
+.hero p{color:#bdc9d8}
+.container{
+ max-width:1100px;
+ margin:auto;
+ padding:20px;
+}
+.title{
+ margin:25px 0 18px;
+ color:#00e5a0;
+ font-size:23px;
+}
+.match{
+ background:linear-gradient(145deg,#17253c,#101a2b);
+ border:1px solid #263c55;
+ border-radius:15px;
+ padding:20px;
+ margin-bottom:18px;
+ box-shadow:0 8px 25px #0007;
+}
+.match-top{
+ display:flex;
+ justify-content:space-between;
+ margin-bottom:20px;
+ color:#a9bbcf;
+ font-size:13px;
+}
+.live{
+ color:#ff4141;
+ font-weight:bold;
+}
+.teams{
+ display:flex;
+ justify-content:space-around;
+ align-items:center;
+ text-align:center;
+ gap:10px;
+}
+.team{
+ font-size:20px;
+ font-weight:bold;
+}
+.score{
+ color:#00e5a0;
+ font-size:24px;
+ margin-top:10px;
+}
+.vs{
+ color:#8293a8;
+ font-size:14px;
+}
+button{
+ background:#00d99a;
+ border:none;
+ padding:11px 18px;
+ border-radius:7px;
+ font-weight:bold;
+ cursor:pointer;
+ margin-top:18px;
+}
+button:hover{background:#00ffb3}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:15px;
+}
+.card{
+ background:#142239;
+ padding:20px;
+ border-radius:12px;
+ border:1px solid #293d56;
+}
+.card h3{color:#00e5a0;margin-bottom:12px}
+.card p{color:#c5d1e0;line-height:1.8}
+table{
+ width:100%;
+ border-collapse:collapse;
+ margin-top:15px;
+ font-size:14px;
+}
+th,td{
+ padding:12px 8px;
+ text-align:left;
+ border-bottom:1px solid #304057;
+}
+th{color:#00e5a0}
+.video-box{
+ background:#111d31;
+ padding:20px;
+ border-radius:12px;
+ text-align:center;
+}
+.video-box iframe{
+ width:100%;
+ max-width:700px;
+ height:350px;
+ border:0;
+ border-radius:10px;
+}
+footer{
+ text-align:center;
+ background:#101c30;
+ padding:25px;
+ color:#9cacc0;
+ margin-top:40px;
+}
+input{
+ width:100%;
+ padding:13px;
+ border-radius:7px;
+ border:1px solid #304057;
+ background:#17253c;
+ color:white;
+ margin-bottom:15px;
+}
+.small{font-size:12px;color:#aab8c9}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo">🏏 MAYANK CRICKET LIVE</div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#live">Live</a>
+  <a href="#matches">Matches</a>
+  <a href="#teams">Teams</a>
+  <a href="#video">Watch</a>
+ </nav>
+</header>
+
+<section class="hero" id="home">
+ <h1>CRICKET LIVE CENTER</h1>
+ <p>Live Scores | Match Updates | Cricket Scorecards</p>
+</section>
+
+<div class="container">
+
+<h2 class="title" id="live">🔴 LIVE MATCHES</h2>
+
+<div id="liveMatches">
+ <div class="match">
+  <div class="match-top">
+   <span>DEMO SCORECARD</span>
+   <span class="live">● DEMO</span>
+  </div>
+  <div class="teams">
+   <div class="team">
+    🇮🇳 INDIA
+    <div class="score">--/--</div>
+   </div>
+   <div class="vs">VS</div>
+   <div class="team">
+    🇦🇺 AUSTRALIA
+    <div class="score">--/--</div>
+   </div>
+  </div>
+  <p class="small" style="text-align:center;margin-top:15px">
+   Connect a cricket API to show real match scores.
+  </p>
+ </div>
+</div>
+
+<h2 class="title" id="matches">📅 UPCOMING MATCHES</h2>
+
+<div class="grid">
+ <div class="card">
+  <h3>🇮🇳 India vs England</h3>
+  <p>International Cricket</p>
+  <p>Match Schedule: API Updates</p>
+ </div>
+
+ <div class="card">
+  <h3>🇦🇺 Australia vs Pakistan</h3>
+  <p>International Cricket</p>
+  <p>Match Schedule: API Updates</p>
+ </div>
+
+ <div class="card">
+  <h3>🇿🇦 South Africa vs New Zealand</h3>
+  <p>International Cricket</p>
+  <p>Match Schedule: API Updates</p>
+ </div>
+</div>
+
+<h2 class="title">📊 LIVE SCORECARD</h2>
+
+<div class="match">
+ <h3 id="scoreTitle">Match Scorecard</h3>
+ <p id="scoreMessage" style="margin-top:12px;color:#b9c9d9">
+  Real scorecard will appear here after connecting an API.
+ </p>
+ <table>
+  <thead>
+   <tr>
+    <th>Batter</th>
+    <th>Runs</th>
+    <th>Balls</th>
+    <th>4s</th>
+    <th>6s</th>
+   </tr>
+  </thead>
+  <tbody id="batterTable">
+   <tr><td colspan="5">Waiting for live data...</td></tr>
+  </tbody>
+ </table>
+</div>
+
+<h2 class="title" id="teams">🌍 INTERNATIONAL TEAMS</h2>
+
+<div class="grid">
+ <div class="card"><h3>🇮🇳 India</h3><p>Team India</p></div>
+ <div class="card"><h3>🇦🇺 Australia</h3><p>Australia Cricket</p></div>
+ <div class="card"><h3>🏴 England</h3><p>England Cricket</p></div>
+ <div class="card"><h3>🇵🇰 Pakistan</h3><p>Pakistan Cricket</p></div>
+ <div class="card"><h3>🇿🇦 South Africa</h3><p>South Africa Cricket</p></div>
+ <div class="card"><h3>🇳🇿 New Zealand</h3><p>New Zealand Cricket</p></div>
+ <div class="card"><h3>🇱🇰 Sri Lanka</h3><p>Sri Lanka Cricket</p></div>
+ <div class="card"><h3>🇧🇩 Bangladesh</h3><p>Bangladesh Cricket</p></div>
+ <div class="card"><h3>🇦🇫 Afghanistan</h3><p>Afghanistan Cricket</p></div>
+ </div>
+
+<h2 class="title" id="video">📺 WATCH LIVE MATCH</h2>
+
+<div class="video-box">
+ <h3>Official Cricket Live Stream</h3>
+ <p style="margin:15px;color:#bdc9d8">
+  Watch live matches through authorized broadcasters.
+ </p>
+ <a href="https://www.icc-cricket.com/" target="_blank">
+  <button>ICC OFFICIAL WEBSITE</button>
+ </a>
+ <br><br>
+ <a href="https://www.bcci.tv/" target="_blank">
+  <button>BCCI OFFICIAL WEBSITE</button>
+ </a>
+</div>
+
+</div>
+
+<footer>
+ <h3 style="color:#00e5a0">🏏 MAYANK CRICKET LIVE</h3>
+ <p style="margin-top:10px">Your Cricket World, One Platform.</p>
+ <p style="margin-top:10px">© 2026 Mayank Cricket Live</p>
+</footer>
+
+</body>
+</html>
